@@ -2,9 +2,16 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Hello Django</title>
+    <title>RecSys</title>
 </head>
 <body>
-    <h1>Welcome to Django!</h1>
+    <h1>Подобрать по параметрам</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            {{form}} 
+        </table>
+        <input type='submit' value='Отправить'>
+    </form>
 </body>
 </html>
